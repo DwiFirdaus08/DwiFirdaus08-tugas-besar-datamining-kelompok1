@@ -1,0 +1,24 @@
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+
+# Byte-compiled / Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# Generated Output Data (File berukuran GB yang diblokir GitHub >100MB)
+data/processed/*.csv
+!data/processed/.gitkeep
+
+# IDE / OS specific files
+.vscode/
+.idea/
+*.log
+.DS_Store
+Thumbs.db
