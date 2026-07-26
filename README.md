@@ -1,4 +1,4 @@
-# 📊 Segmentasi UMKM Lokal Kota Bandung Berdasarkan Rating, Jumlah Ulasan, dan Sentimen Ulasan Google Maps Menggunakan Algoritma K-Means Clustering
+# Segmentasi UMKM Lokal Kota Bandung Berdasarkan Rating, Jumlah Ulasan, dan Sentimen Ulasan Google Maps Menggunakan Algoritma K-Means Clustering
 
 ## 1. Judul Kasus
 
@@ -76,9 +76,9 @@ Hasil clustering menghasilkan **K = 3** klaster, dievaluasi menggunakan *Silhoue
 
 Untuk memastikan proyek berjalan stabil tanpa mengganggu pustaka Python sistem Anda, sangat direkomendasikan membuat Virtual Environment (venv).
 
-### 💻 Panduan Instalasi & Setup Virtual Environment
+### Panduan Instalasi & Setup Virtual Environment
 
-#### 🪟 1. Panduan Pengaturan di Windows (PowerShell / CMD / Git Bash)
+#### 1. Panduan Pengaturan di Windows (PowerShell / CMD / Git Bash)
 **Langkah 1:** Buka Terminal dan Masuk ke Folder Proyek
 ```bash
 git clone https://github.com/USERNAMEKAMU/tugas-besar-datamining-kelompok1.git
@@ -101,7 +101,7 @@ python -m venv venv
 pip install -r requirements.txt
 ```
 
-#### 🍏 2. Panduan Pengaturan di macOS / Linux
+#### 2. Panduan Pengaturan di macOS / Linux
 **Langkah 1:** Buka Terminal dan Masuk ke Folder Proyek
 ```bash
 cd path/to/tugas-besar-datamining-kelompok1
@@ -121,11 +121,11 @@ pip install -r requirements.txt
 
 ---
 
-### 🚀 Cara Menjalankan Pipeline
+### Cara Menjalankan Pipeline
 
 Proyek ini mendukung dua opsi eksekusi utama (pilih salah satu):
 
-#### 🎯 Opsi A: Menggunakan Terminal Script (Automatis)
+#### Opsi A: Menggunakan Terminal Script (Automatis)
 Menggunakan opsi ini akan mengeksekusi seluruh tahapan pipeline dari dataset mentah hingga keluaran akhir secara otomatis lewat terminal, lengkap dengan progress bar.
 *Pastikan `(venv)` sudah aktif!*
 ```bash
@@ -136,7 +136,7 @@ atau menggunakan bash script:
 bash run.sh
 ```
 
-#### 📓 Opsi B: Menggunakan Jupyter Notebook (Step-by-step)
+#### Opsi B: Menggunakan Jupyter Notebook (Step-by-step)
 Opsi ini sangat cocok jika dosen/evaluator ingin mengevaluasi proyek melalui antarmuka visual langkah-demi-langkah.
 
 1. Buka `notebook/01_EDA_Data_Understanding.ipynb` → **Run All** (eksplorasi data & visualisasi)
