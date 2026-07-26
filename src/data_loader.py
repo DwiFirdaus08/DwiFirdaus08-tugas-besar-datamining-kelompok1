@@ -19,7 +19,9 @@ def load_csv_safe(filename):
     if path is None:
         return None
     try:
-        return pd.read_csv(path, sep=None, engine='python')
+        df = pd.read_csv(path, sep=None, engine='python', encoding='utf-8-sig')
+        df.columns = [c.replace('"', '').strip() for c in df.columns]
+        return df
     except Exception:
         return None
 
