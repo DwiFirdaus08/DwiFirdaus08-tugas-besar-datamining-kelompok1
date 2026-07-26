@@ -39,9 +39,9 @@ def run_kmeans_clustering(df, n_clusters=3, random_state=42):
     df['pca_y'] = pca_coords[:, 1]
 
     cluster_names = {
-        0: "Cluster 0: UMKM Digital Mapan (Rating & Ulasan Tinggi)",
-        1: "Cluster 1: UMKM Berkembang (Rating Sedang)",
-        2: "Cluster 2: UMKM Pemula / Butuh Pembinaan (Ulasan Rendah)"
+        0: "Cluster 1: Reputasi Positif – Volume Ulasan Rendah",
+        1: "Cluster 2: Reputasi Digital Perlu Perbaikan",
+        2: "Cluster 3: Performa Digital Tinggi"
     }
     df['cluster_name'] = df['cluster'].map(cluster_names)
 
@@ -60,9 +60,9 @@ def generate_llm_recommendations(df):
     df = df.copy()
     
     rekomendasi_map = {
-        0: "Pertahankan kualitas layanan (Reliability), optimalkan loyalitas pelanggan (Empathy), & tingkatkan efisiensi digital (Tangibles).",
-        1: "Tingkatkan respon ulasan pelanggan (Responsiveness), perbanyak promo voucher, & peremajaan tampilan tempat usaha (Tangibles).",
-        2: "Fokus edukasi pemasaran digital dasar (Assurance), perbaiki penanganan keluhan (Responsiveness), & kumpulkan ulasan awal (Reliability)."
+        0: "Jaga kualitas yang telah memperoleh penilaian positif, pastikan profil akurat, dan dorong ulasan secara etis dari pelanggan asli tanpa imbalan.",
+        1: "Lakukan pemeriksaan manual tema keluhan sebelum perubahan layanan. Keputusan operasional tidak boleh hanya dari label sentimen otomatis.",
+        2: "Jaga konsistensi informasi dan pengalaman pelanggan, pantau perubahan ulasan, dan gunakan masukan sebagai bahan perbaikan berkelanjutan."
     }
 
     rekomendasi_list = []

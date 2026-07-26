@@ -12,9 +12,8 @@ __pycache__/
 # Jupyter Notebook Checkpoints
 .ipynb_checkpoints/
 
-# Generated Output Data (File berukuran GB yang diblokir GitHub >100MB)
-data/processed/*.csv
-!data/processed/.gitkeep
+# Processed data akan di-commit supaya repo bisa langsung dijalankan
+# Jika file terlalu besar (>100MB), gunakan Git LFS
 
 # IDE / OS specific files
 .vscode/
