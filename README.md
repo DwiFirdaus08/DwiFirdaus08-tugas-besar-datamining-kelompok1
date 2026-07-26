@@ -72,22 +72,76 @@ Hasil clustering menghasilkan **K = 3** klaster, dievaluasi menggunakan *Silhoue
 - **Klaster 2:** Lakukan pemeriksaan manual tema keluhan sebelum perubahan layanan. Keputusan operasional tidak boleh hanya berdasar label sentimen otomatis.
 - **Klaster 3:** Jaga konsistensi informasi dan pengalaman pelanggan, pantau perubahan ulasan, dan gunakan masukan sebagai bahan perbaikan berkelanjutan.
 
-## 8. Cara Menjalankan (Run Notebook & Script)
+## 8. Cara Menjalankan Proyek & Panduan Instalasi (VENV)
 
-### Opsi A: Via Terminal / Bash Script (Pipeline Lengkap)
+Untuk memastikan proyek berjalan stabil tanpa mengganggu pustaka Python sistem Anda, sangat direkomendasikan membuat Virtual Environment (venv).
 
-Jalankan perintah ini di direktori root untuk mengeksekusi semua tahapan sekaligus:
+### 💻 Panduan Instalasi & Setup Virtual Environment
+
+#### 🪟 1. Panduan Pengaturan di Windows (PowerShell / CMD / Git Bash)
+**Langkah 1:** Buka Terminal dan Masuk ke Folder Proyek
+```bash
+git clone https://github.com/USERNAMEKAMU/tugas-besar-datamining-kelompok1.git
+cd tugas-besar-datamining-kelompok1
+```
+**Langkah 2:** Buat Virtual Environment
+```bash
+python -m venv venv
+```
+*(Catatan: pakai `py -3.12 -m venv venv` jika memiliki beberapa versi Python)*
+
+**Langkah 3:** Aktifkan Virtual Environment
+- **PowerShell:** `.\venv\Scripts\Activate.ps1` *(Jika error ExecutionPolicy, jalankan: `Set-ExecutionPolicy Unrestricted -Scope Process`)*
+- **CMD:** `venv\Scripts\activate.bat`
+- **Git Bash:** `source venv/Scripts/activate`
+*(Indikator `(venv)` akan muncul di sebelah kiri nama terminal)*
+
+**Langkah 4:** Install Seluruh Dependensi Pustaka
+```bash
+pip install -r requirements.txt
+```
+
+#### 🍏 2. Panduan Pengaturan di macOS / Linux
+**Langkah 1:** Buka Terminal dan Masuk ke Folder Proyek
+```bash
+cd path/to/tugas-besar-datamining-kelompok1
+```
+**Langkah 2:** Buat Virtual Environment
+```bash
+python3 -m venv venv
+```
+**Langkah 3:** Aktifkan Virtual Environment
+```bash
+source venv/bin/activate
+```
+**Langkah 4:** Install Seluruh Dependensi Pustaka
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+### 🚀 Cara Menjalankan Pipeline
+
+Proyek ini mendukung dua opsi eksekusi utama (pilih salah satu):
+
+#### 🎯 Opsi A: Menggunakan Terminal Script (Automatis)
+Menggunakan opsi ini akan mengeksekusi seluruh tahapan pipeline dari dataset mentah hingga keluaran akhir secara otomatis lewat terminal, lengkap dengan progress bar.
+*Pastikan `(venv)` sudah aktif!*
 ```bash
 python src/main.py
-# atau
+```
+atau menggunakan bash script:
+```bash
 bash run.sh
 ```
 
-### Opsi B: Step-by-step Jupyter Notebook
+#### 📓 Opsi B: Menggunakan Jupyter Notebook (Step-by-step)
+Opsi ini sangat cocok jika dosen/evaluator ingin mengevaluasi proyek melalui antarmuka visual langkah-demi-langkah.
 
-Seluruh proses dapat dikontrol dan dipantau melalui 4 notebook terpisah yang dijalankan **berurutan**:
-
-1. Buka `notebook/01_EDA_Data_Understanding.ipynb` → **Run All** (hanya eksplorasi data & visualisasi)
-2. Buka `notebook/02_Preprocessing.ipynb` → **Run All** (membersihkan & merangkum data)
+1. Buka `notebook/01_EDA_Data_Understanding.ipynb` → **Run All** (eksplorasi data & visualisasi)
+2. Buka `notebook/02_Preprocessing.ipynb` → **Run All** (membersihkan & analisis sentimen NLP)
 3. Buka `notebook/03_Modeling_KMeans.ipynb` → **Run All** (melatih model K-means)
 4. Buka `notebook/04_Rekomendasi_Bisnis.ipynb` → **Run All** (menghasilkan segmentasi akhir)
+
+*(Selain itu, juga tersedia `src/main_notebook.ipynb` sebagai representasi visual dari `main.py`)*
